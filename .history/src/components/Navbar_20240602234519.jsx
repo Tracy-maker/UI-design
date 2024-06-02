@@ -31,9 +31,11 @@ const Navbar = () => {
               className="w-10 h-10 mt-1 object-contain sm:w-6 sm:h-6 sm:mt-1.5"
             />
             &apos;s&nbsp;
-            <div className="block"> Crafted UI </div>
+            <span className="block"> Crafted UI </span>
           </p>
         </Link>
+      
+    
       </div>
     </nav>
   );

@@ -8,7 +8,7 @@ import {
   Final,
   Contact,
   Menu,
-  Interface,
+  Interface
 } from "./components";
 
 const App = () => {
@@ -26,6 +26,7 @@ const App = () => {
         <Final />
         <div className="relative z-0">
           <Contact />
+        
         </div>
       </div>
     </BrowserRouter>

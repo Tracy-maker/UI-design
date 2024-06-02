@@ -6,4 +6,3 @@ export { default as Prototyping } from "./Prototyping";
 export { default as Final } from "./Final";
 export { default as Contact } from "./Contact";
 export { default as Menu } from "./Menu";
-export { default as Interface } from "./Interface";

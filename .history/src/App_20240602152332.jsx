@@ -8,7 +8,6 @@ import {
   Final,
   Contact,
   Menu,
-  Interface,
 } from "./components";
 
 const App = () => {
@@ -17,7 +16,7 @@ const App = () => {
       <div className="relative z-0 bg-primary-gradient">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
-          {/* <Menu /> */}
+          <Menu />
           <Story />
         </div>
         <Challenge />
@@ -26,6 +25,7 @@ const App = () => {
         <Final />
         <div className="relative z-0">
           <Contact />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
