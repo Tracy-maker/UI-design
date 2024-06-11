@@ -3,9 +3,9 @@ import Shop from "./components/models/Shop";
 import { Canvas } from "@react-three/fiber";
 
 const App = () => {
-  const screenPosition = [0, 0, 0];
-  const screenScale = [1, 1, 1];
-  const rotation = [0, 0, 0];
+  const screenPosition = [0, 0, 0]; 
+  const screenScale = [1, 1, 1]; 
+  const rotation = [0, 0, 0]; 
 
   return (
     <>
