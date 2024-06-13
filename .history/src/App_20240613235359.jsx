@@ -13,7 +13,7 @@ const App = () => {
       const { clientX, clientY } = event;
       const x = (clientX / window.innerWidth) * 2 - 1;
       const y = -(clientY / window.innerHeight) * 2 + 1;
-      setMousePosition([x * 5, y * 5, 0]); 
+      setMousePosition([x * 6, y * 5, 0]); // Adjust scaling factor as needed
     };
 
     window.addEventListener("mousemove", handleMouseMove);

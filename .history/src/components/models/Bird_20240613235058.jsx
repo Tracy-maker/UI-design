@@ -18,8 +18,8 @@ const Bird = ({ position }) => {
   useFrame(({ clock }) => {
     if (birdRef.current) {
       const t = clock.getElapsedTime();
-      const amplitude = 3;
-      const frequency = 0.5;
+      const amplitude = 3; // Amplitude of the horizontal wave
+      const frequency = 0.5; // Frequency of the wave
 
       const x = Math.sin(t * frequency) * amplitude;
       const y = position[1];
@@ -30,16 +30,16 @@ const Bird = ({ position }) => {
 
       // Calculate the direction of movement for smooth turning
       const dx = x - prevPosition.current.x;
+      const angle = Math.atan2(0, dx);
 
-      // Rotate based on direction of movement
-      birdRef.current.rotation.y = dx > 0 ? Math.PI / 2 : -Math.PI / 2;
+      birdRef.current.rotation.y = angle; // Rotate based on direction of movement
 
       // Update previous position
       prevPosition.current.x = x;
     }
   });
 
-  return <primitive ref={birdRef} object={scene} scale={[0.1, 0.1, 0.1]} />;
+  return <primitive ref={birdRef} object={scene} scale={[1, 1, 1]} />;
 };
 
 export default Bird;

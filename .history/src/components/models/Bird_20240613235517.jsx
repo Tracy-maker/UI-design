@@ -18,8 +18,8 @@ const Bird = ({ position }) => {
   useFrame(({ clock }) => {
     if (birdRef.current) {
       const t = clock.getElapsedTime();
-      const amplitude = 3;
-      const frequency = 0.5;
+      const amplitude = 13; // Amplitude of the horizontal wave
+      const frequency = 0.5; // Frequency of the wave
 
       const x = Math.sin(t * frequency) * amplitude;
       const y = position[1];
