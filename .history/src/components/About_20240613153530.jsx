@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "./models/Section";
+import styles from "../styles";
 import Shop from "./models/Shop";
 
 const About = () => {
