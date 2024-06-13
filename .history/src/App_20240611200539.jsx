@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="w-full h-screen overflow-hidden bg-primary-gradient">
-      <Navbar />
+     <Navbar/>
       <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
         <ScrollControls pages={4} damping={0.1}>
           <Scroll html>
