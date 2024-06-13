@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import Shop from "./models/Shop";
 import Loader from "../components/Loader";
 import Section from "./models/Section";
+import Bird from "./models/Bird";
 
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
@@ -13,7 +14,7 @@ const About = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.4, 0.4, 0.4]);
+        setIsShopScale([0.5, 0.5, 0.5]);
       } else {
         setIsShopScale([0.5, 0.5, 0.5]);
       }
@@ -38,6 +39,9 @@ const About = () => {
             for the flower shop mobile app.
           </p>
         </div>
+        <div>
+          <Bird />
+        </div>
       </div>
 
       <div className="flex-1 p-4 mt-40 lg:pl-8 h-full flex items-start">
@@ -48,8 +52,19 @@ const About = () => {
           <Suspense fallback={<Loader />}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
             <ambientLight intensity={0.5} />
-            <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
-            <Shop position={isShopPosition} scale={isShopScale} rotation={rotation} />
+            <hemisphereLight
+              skyColor="#b1e1ff"
+              groundColor="#000000"
+              intensity={1}
+            />
+            <Shop
+              setCurrentStage={setCurrentStage}
+              position={isShopPosition}
+              scale={isShopScale}
+              rotation={rotation}
+              isRotating={isRotating}
+              setIsRotating={setIsRotating}
+            />
           </Suspense>
         </Canvas>
       </div>

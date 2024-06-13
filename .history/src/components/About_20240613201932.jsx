@@ -13,7 +13,7 @@ const About = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.4, 0.4, 0.4]);
+        setIsShopScale([0.5, 0.5, 0.5]);
       } else {
         setIsShopScale([0.5, 0.5, 0.5]);
       }
@@ -48,8 +48,14 @@ const About = () => {
           <Suspense fallback={<Loader />}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
             <ambientLight intensity={0.5} />
-            <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
-            <Shop position={isShopPosition} scale={isShopScale} rotation={rotation} />
+            <pointLight skyColor="#b1e1ff" groundColor="#000000" />
+            <spotLight />
+            <hemisphereLight />
+            <Shop
+              position={isShopPosition}
+              scale={isShopScale}
+              rotation={rotation}
+            />
           </Suspense>
         </Canvas>
       </div>

@@ -1,14 +1,14 @@
 import React from "react";
+import { Canvas } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import birdScene from "../../assets/3d/lowpoly_humming-bird_animated.glb";
 
-const Bird = ({ position }) => {
+const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
 
   return (
-    <mesh position={position} scale={[17, 16, 3]}>
-      <primitive object={scene} />
-    </mesh>
+    <mesh position={[-5, 20, 10]} scale={[17, 16, 3]}></mesh  >
+    <primitive object={scene} />
   );
 };
 

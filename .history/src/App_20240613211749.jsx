@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Interface from "./components/Interface";
