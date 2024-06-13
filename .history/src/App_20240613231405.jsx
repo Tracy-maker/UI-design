@@ -26,20 +26,25 @@ const App = () => {
   return (
     <div className="w-full h-screen overflow-hidden bg-primary-gradient">
       <Navbar />
-      <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
-        <Suspense fallback={null}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 10]} intensity={1} />
+      <div className="relative w-full h-full">
+        <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
+          <Suspense fallback={null}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 10]} intensity={1} />
+            <Bird position={mousePosition} />
+          </Suspense>
+          <ScrollControls pages={4} damping={0.1}>
+            <Scroll html>
+              <div className="relative">
+                <Interface />
+              </div>
+            </Scroll>
+          </ScrollControls>
+        </Canvas>
+        <div className="absolute inset-0 z-10 pointer-events-none">
           <Bird position={mousePosition} />
-        </Suspense>
-        <ScrollControls pages={4} damping={0.1}>
-          <Scroll html>
-            <div className="relative">
-              <Interface />
-            </div>
-          </Scroll>
-        </ScrollControls>
-      </Canvas>
+        </div>
+      </div>
     </div>
   );
 };

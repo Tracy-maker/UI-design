@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="w-full h-screen overflow-hidden bg-primary-gradient">
       <Navbar />
-      <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
+      <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 10]} intensity={1} />

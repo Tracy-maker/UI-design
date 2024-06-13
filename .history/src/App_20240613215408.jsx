@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Interface from "./components/Interface";
@@ -13,7 +13,7 @@ const App = () => {
       const { clientX, clientY } = event;
       const x = (clientX / window.innerWidth) * 2 - 1;
       const y = -(clientY / window.innerHeight) * 2 + 1;
-      setMousePosition([x * 10, y * 10, 0]); 
+      setMousePosition([x * 10, y * 10, 0]); // Adjust scaling factor as needed
     };
 
     window.addEventListener("mousemove", handleMouseMove);

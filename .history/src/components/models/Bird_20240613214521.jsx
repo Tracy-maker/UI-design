@@ -6,7 +6,7 @@ const Bird = ({ position }) => {
   const { scene, animations } = useGLTF(birdScene);
 
   return (
-    <mesh position={position} scale={[0.1, 0.1, 0.1]}> {/* Adjust the scale here */}
+    <mesh position={position} scale={[0.1, 0.1, 0.1]}>
       <primitive object={scene} />
     </mesh>
   );
