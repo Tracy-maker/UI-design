@@ -5,7 +5,7 @@ import Loader from "../components/Loader";
 import Section from "./models/Section";
 
 const About = () => {
-  const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
+  const [isShopScale, setIsShopScale] = useState([0.6, 0.6, 0.6]);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
 
   const rotation = [0, 0, 0];
@@ -13,7 +13,7 @@ const About = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.5, 0.5, 0.5]);
+        setIsShopScale([0.4, 0.4, 0.4]);
       } else {
         setIsShopScale([0.5, 0.5, 0.5]);
       }
@@ -40,7 +40,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex-1 p-4 mt-40 lg:pl-8 h-full flex items-start">
+      <div className="flex-1 p-4 lg:pl-8 h-full flex items-start">
         <Canvas
           className="w-full h-full bg-transparent"
           camera={{ near: 0.1, far: 1000 }}
