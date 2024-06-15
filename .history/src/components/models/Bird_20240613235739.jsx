@@ -39,7 +39,7 @@ const Bird = ({ position }) => {
     }
   });
 
-  return <primitive ref={birdRef} object={scene} scale={[0.3, 0.3, 0.3]} />;
+  return <primitive ref={birdRef} object={scene} scale={[0.2, 0.2, 0.2]} />;
 };
 
 export default Bird;

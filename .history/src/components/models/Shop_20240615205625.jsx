@@ -10,48 +10,50 @@ Title: Ancient Greek book shop
 import React, { useRef, useEffect, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import { a } from "@react-spring/three";
 import isShopScene from "../../assets/3d/ancient_greek_book_shop.glb";
+import { a } from "@react-spring/three";
 
-const Shop = ({ setCurrentStage, currentFocusPoint, ...props }) => {
+const Shop = ({...props }) => {
   const isShopRef = useRef();
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(isShopScene);
-  const rotationSpeed = 0.005; // Set the rotation speed here
+  const [isRotating, setIsRotating] = useState(false);
+  const [rotation, setRotation] = useState([0, 0, 0]);
+  const [startPos, setStartPos] = useState([0, 0]);
 
-  // This function is called on each frame update
-  useFrame(() => {
-    if (isShopRef.current) {
-      isShopRef.current.rotation.y += rotationSpeed;
+  const handlePointerDown = (e) => {
+    setIsRotating(true);
+    setStartPos([e.clientX, e.clientY]);
+  };
 
-      // When rotating, determine the current stage based on island's orientation
-      const rotation = isShopRef.current.rotation.y;
-
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-
-      // Set the current stage based on the island's orientation
-      switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
-          break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
-          break;
-        default:
-          setCurrentStage(null);
-      }
+  const handlePointerMove = (e) => {
+    if (isRotating) {
+      const [startX, startY] = startPos;
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
+      setRotation([rotation[0] + deltaY * 0.01, rotation[1] + deltaX * 0.01, rotation[2]]);
+      setStartPos([e.clientX, e.clientY]);
     }
-  });
+  };
+
+  const handlePointerUp = () => {
+    setIsRotating(false);
+  };
+
+  useEffect(() => {
+    gl.domElement.addEventListener('pointerdown', handlePointerDown);
+    gl.domElement.addEventListener('pointermove', handlePointerMove);
+    gl.domElement.addEventListener('pointerup', handlePointerUp);
+
+    return () => {
+      gl.domElement.removeEventListener('pointerdown', handlePointerDown);
+      gl.domElement.removeEventListener('pointermove', handlePointerMove);
+      gl.domElement.removeEventListener('pointerup', handlePointerUp);
+    };
+  }, [isRotating, startPos, rotation]);
 
   return (
-    <a.group ref={isShopRef} {...props}>
+    <a.group ref={isShopRef} {...props} rotation={rotation}>
       <group
         position={[14.738, 8.824, -14.96]}
         rotation={[-Math.PI / 2, 0, -1.484]}

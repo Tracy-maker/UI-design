@@ -7,49 +7,22 @@ Source: https://sketchfab.com/3d-models/ancient-greek-book-shop-25eab089b795408b
 Title: Ancient Greek book shop
 */
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import { a } from "@react-spring/three";
 import isShopScene from "../../assets/3d/ancient_greek_book_shop.glb";
+import { a } from "@react-spring/three";
 
-const Shop = ({ setCurrentStage, currentFocusPoint, ...props }) => {
+const Shop = (
+  isRotating,
+  setIsRotating,
+  setCurrentStage,
+  currentFocusPoint,
+  ...props
+) => {
   const isShopRef = useRef();
-  const { gl, viewport } = useThree();
+  const {}
   const { nodes, materials } = useGLTF(isShopScene);
-  const rotationSpeed = 0.005; // Set the rotation speed here
-
-  // This function is called on each frame update
-  useFrame(() => {
-    if (isShopRef.current) {
-      isShopRef.current.rotation.y += rotationSpeed;
-
-      // When rotating, determine the current stage based on island's orientation
-      const rotation = isShopRef.current.rotation.y;
-
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-
-      // Set the current stage based on the island's orientation
-      switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
-          break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
-          break;
-        default:
-          setCurrentStage(null);
-      }
-    }
-  });
-
   return (
     <a.group ref={isShopRef} {...props}>
       <group

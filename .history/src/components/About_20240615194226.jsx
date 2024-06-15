@@ -6,23 +6,25 @@ import Section from "./models/Section";
 
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
+  const [isRotating, setIsRotating] = useState(false);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
-  const [currentStage, setCurrentStage] = useState(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setIsShopScale([0.4, 0.4, 0.4]);
-      } else {
-        setIsShopScale([0.5, 0.5, 0.5]);
-      }
-    };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  const adjustShopForScreenSize = () => {
+    let screenScale, screenPosition;
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    if (window.innerWidth < 768) {
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, -6.5, -43.4];
+    } else {
+      screenScale = [1, 1, 1];
+      screenPosition = [0, -6.5, -43.4];
+    }
+
+    return [screenScale, screenPosition];
+  };
+
+  const [shopScale, ShopPosition] = adjustShopForScreenSize();
 
   return (
     <Section>
@@ -53,10 +55,11 @@ const About = () => {
               intensity={1}
             />
             <Shop
-              setCurrentStage={setCurrentStage}
-              position={isShopPosition}
-              rotation={[0, Math.PI / 2, 0]}
-              scale={isShopScale}
+                isRotating={isRotating}
+                setIsRotating={setIsRotating}
+                position={isShopPosition}
+                rotation={[0.1, 4.7077, 0]}
+                scale={islandScale}
             />
           </Suspense>
         </Canvas>
@@ -65,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About

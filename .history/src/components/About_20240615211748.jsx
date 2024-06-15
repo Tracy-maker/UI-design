@@ -7,7 +7,6 @@ import Section from "./models/Section";
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
-  const [currentStage, setCurrentStage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,6 +52,8 @@ const About = () => {
               intensity={1}
             />
             <Shop
+              isRotating={true}
+              setIsRotating={setIsRotating}
               setCurrentStage={setCurrentStage}
               position={isShopPosition}
               rotation={[0, Math.PI / 2, 0]}

@@ -1,3 +1,4 @@
+
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Shop from "./models/Shop";
@@ -7,7 +8,6 @@ import Section from "./models/Section";
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
-  const [currentStage, setCurrentStage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,7 +53,7 @@ const About = () => {
               intensity={1}
             />
             <Shop
-              setCurrentStage={setCurrentStage}
+              isRotating={true}
               position={isShopPosition}
               rotation={[0, Math.PI / 2, 0]}
               scale={isShopScale}

@@ -7,7 +7,8 @@ import Section from "./models/Section";
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
-  const [currentStage, setCurrentStage] = useState(null);
+
+  const rotation = [0, 0, 0];
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,17 +48,8 @@ const About = () => {
           <Suspense fallback={<Loader />}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
             <ambientLight intensity={0.5} />
-            <hemisphereLight
-              skyColor="#b1e1ff"
-              groundColor="#000000"
-              intensity={1}
-            />
-            <Shop
-              setCurrentStage={setCurrentStage}
-              position={isShopPosition}
-              rotation={[0, Math.PI / 2, 0]}
-              scale={isShopScale}
-            />
+            <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+            <Shop position={isShopPosition} scale={isShopScale} rotation={rotation} />
           </Suspense>
         </Canvas>
       </div>

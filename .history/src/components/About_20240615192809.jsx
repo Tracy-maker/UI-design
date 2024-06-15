@@ -10,43 +10,73 @@ Title: Ancient Greek book shop
 import React, { useRef, useEffect, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
+import isShopScene from "../assets/3d/ancient_greek_book_shop.glb";
 import { a } from "@react-spring/three";
-import isShopScene from "../../assets/3d/ancient_greek_book_shop.glb";
 
-const Shop = ({ setCurrentStage, currentFocusPoint, ...props }) => {
+const Shop = ({ ...props }) => {
   const isShopRef = useRef();
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(isShopScene);
-  const rotationSpeed = 0.005; // Set the rotation speed here
+  const [isRotating, setIsRotating] = useState(false);
+
+  // Use a ref for the last mouse x position
+  const lastX = useRef(0);
+  // Use a ref for rotation speed
+  const rotationSpeed = useRef(0);
+  // Define a damping factor to control rotation damping
+  const dampingFactor = 0.95;
+
+  // Handle pointer (mouse or touch) down event
+  const handlePointerDown = (event) => {
+    setIsRotating(true);
+    lastX.current = event.clientX || event.touches[0].clientX;
+  };
+
+  // Handle pointer (mouse or touch) up event
+  const handlePointerUp = () => {
+    setIsRotating(false);
+  };
+
+  // Handle pointer (mouse or touch) move event
+  const handlePointerMove = (event) => {
+    if (isRotating) {
+      const clientX = event.clientX || event.touches[0].clientX;
+      const delta = (clientX - lastX.current) / viewport.width;
+      isShopRef.current.rotation.y += delta * 0.5; // Adjust the rotation speed
+      lastX.current = clientX;
+    }
+  };
+
+  useEffect(() => {
+    // Add event listeners for pointer and keyboard events
+    const canvas = gl.domElement;
+    canvas.addEventListener("pointerdown", handlePointerDown);
+    canvas.addEventListener("pointerup", handlePointerUp);
+    canvas.addEventListener("pointermove", handlePointerMove);
+    canvas.addEventListener("touchstart", handlePointerDown);
+    canvas.addEventListener("touchend", handlePointerUp);
+    canvas.addEventListener("touchmove", handlePointerMove);
+
+    // Remove event listeners when component unmounts
+    return () => {
+      canvas.removeEventListener("pointerdown", handlePointerDown);
+      canvas.removeEventListener("pointerup", handlePointerUp);
+      canvas.removeEventListener("pointermove", handlePointerMove);
+      canvas.removeEventListener("touchstart", handlePointerDown);
+      canvas.removeEventListener("touchend", handlePointerUp);
+      canvas.removeEventListener("touchmove", handlePointerMove);
+    };
+  }, [gl]);
 
   // This function is called on each frame update
   useFrame(() => {
-    if (isShopRef.current) {
-      isShopRef.current.rotation.y += rotationSpeed;
-
-      // When rotating, determine the current stage based on island's orientation
-      const rotation = isShopRef.current.rotation.y;
-
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-
-      // Set the current stage based on the island's orientation
-      switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
-          break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
-          break;
-        default:
-          setCurrentStage(null);
+    // If not rotating, apply damping to slow down the rotation (smoothly)
+    if (!isRotating) {
+      rotationSpeed.current *= dampingFactor;
+      if (Math.abs(rotationSpeed.current) < 0.001) {
+        rotationSpeed.current = 0;
       }
+      isShopRef.current.rotation.y += rotationSpeed.current;
     }
   });
 
