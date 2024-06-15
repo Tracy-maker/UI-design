@@ -27,11 +27,11 @@ const Bird = () => {
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setBirdScale([0.2, 0.2, 0.2]);
+        setBirdScale([0.5, 0.5, 0.5]);
       } else if (window.innerWidth < 1024) {
-        setBirdScale([0.3, 0.3, 0.3]);
+        setBirdScale([0.75, 0.75, 0.75]);
       } else {
-        setBirdScale([0.4, 0.4, 0.4]);
+        setBirdScale([1, 1, 1]);
       }
     };
 

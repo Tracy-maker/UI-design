@@ -12,13 +12,13 @@ const About = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.3, 0.3, 0.3]);
+        setIsShopScale([0.5, 0.5, 0.5]);
         setIsShopPosition([0, -6.5, -47]);
       } else if (window.innerWidth < 1024) {
-        setIsShopScale([0.4, 0.4, 0.4]);
+        setIsShopScale([0.6, 0.6, 0.6]);
         setIsShopPosition([0, -6.5, -40]);
       } else {
-        setIsShopScale([0.5, 0.5, 0.5]);
+        setIsShopScale([0.7, 0.7, 0.7]);
         setIsShopPosition([0, -6.5, -43]);
       }
     };

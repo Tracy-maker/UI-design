@@ -9,7 +9,7 @@ const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const { actions } = useAnimations(animations, birdRef);
   const [mousePosition, setMousePosition] = useState([0, 0, 0]);
-  const [birdScale, setBirdScale] = useState([0.5, 0.5, 0.5]);
+  const [birdScale, setBirdScale] = useState([1, 1, 1]);
 
   useEffect(() => {
     if (actions && Object.keys(actions).length > 0) {
@@ -27,11 +27,11 @@ const Bird = () => {
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setBirdScale([0.2, 0.2, 0.2]);
+        setBirdScale([0.5, 0.5, 0.5]);
       } else if (window.innerWidth < 1024) {
-        setBirdScale([0.3, 0.3, 0.3]);
+        setBirdScale([0.75, 0.75, 0.75]);
       } else {
-        setBirdScale([0.4, 0.4, 0.4]);
+        setBirdScale([1, 1, 1]);
       }
     };
 
@@ -53,9 +53,10 @@ const Bird = () => {
 
       const x = Math.sin(t * frequency) * amplitude;
       const y = mousePosition[1];
-      const z = mousePosition[2];
 
-      birdRef.current.position.set(x, y, z);
+      birdRef.current.position.x = x;
+      birdRef.current.position.y = y;
+      birdRef.current.position.z = mousePosition[2];
 
       // Calculate the direction of movement for smooth turning
       const dx = x - prevPosition.current.x;

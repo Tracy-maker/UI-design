@@ -31,7 +31,7 @@ const Bird = () => {
       } else if (window.innerWidth < 1024) {
         setBirdScale([0.3, 0.3, 0.3]);
       } else {
-        setBirdScale([0.4, 0.4, 0.4]);
+        setBirdScale([1, 1, 1]);
       }
     };
 

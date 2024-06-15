@@ -6,19 +6,19 @@ import Section from "./models/Section";
 
 const About = () => {
   const [isShopScale, setIsShopScale] = useState([0.6, 0.6, 0.6]);
-  const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -93]);
+  const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -993]);
   const [currentStage, setCurrentStage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.3, 0.3, 0.3]);
-        setIsShopPosition([0, -6.5, -47]);
+        setIsShopScale([0.5, 0.5, 0.5]);
+        setIsShopPosition([0, -6.5, -35]);
       } else if (window.innerWidth < 1024) {
-        setIsShopScale([0.4, 0.4, 0.4]);
+        setIsShopScale([0.6, 0.6, 0.6]);
         setIsShopPosition([0, -6.5, -40]);
       } else {
-        setIsShopScale([0.5, 0.5, 0.5]);
+        setIsShopScale([0.7, 0.7, 0.7]);
         setIsShopPosition([0, -6.5, -43]);
       }
     };
@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <Section className="flex flex-col lg:flex-row items-start p-4">
-      <div className="flex-1 pt-20 lg:pr-4">
+      <div className="flex-1 p-1 lg:pr-4">
         <div>
           <h1 className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-2">
             Hi, I'm <span className="text-[#915EFF]">Rita Zhang</span>
