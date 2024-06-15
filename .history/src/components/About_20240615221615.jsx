@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <Section className="flex flex-col lg:flex-row items-center p-4">
-      <div className="flex-1 pt-20 sm:pt-10 lg:pr-4">
+      <div className="flex-1 pt-2  lg:pr-4">
         <h1 className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-2">
           Hi, I'm <span className="text-[#915EFF]">Rita Zhang</span>
         </h1>
