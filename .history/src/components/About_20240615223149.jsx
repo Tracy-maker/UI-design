@@ -7,8 +7,8 @@ import Section from "./models/Section";
 
 const About = () => {
   return (
-    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
-      <div className="flex-1 flex flex-col justify-center pt-2 sm:pt-8 lg:pr-4">
+    <Section className="flex flex-col lg:flex-row items-center p-4">
+      <div className="flex-1 flex-end pt-2 sm:pt-8 lg:pr-4">
         <motion.h1
           className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-2"
           initial={{ opacity: 0, y: -20 }}
@@ -32,7 +32,7 @@ const About = () => {
       <div className="flex-1 h-[50vh] lg:h-full flex items-center justify-center">
         <Canvas
           className="w-full h-full bg-transparent"
-          camera={{ position: [0, 0, 0], near: 0.1, far: 1000 }}
+          camera={{ position: [0, 0, 10], near: 0.1, far: 1000 }}
         >
           <Suspense fallback={<Loader />}>
             <directionalLight position={[1, 1, 1]} intensity={2} />

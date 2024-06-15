@@ -32,7 +32,7 @@ const About = () => {
       <div className="flex-1 h-[50vh] lg:h-full flex items-center justify-center">
         <Canvas
           className="w-full h-full bg-transparent"
-          camera={{ position: [0, 0, 0], near: 0.1, far: 1000 }}
+          camera={{ position: [0, 0, 10], near: 0.1, far: 1000 }}
         >
           <Suspense fallback={<Loader />}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
