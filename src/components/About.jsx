@@ -1,11 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import Shop from "./models/Shop";
 import Loader from "../components/Loader";
 import Section from "./models/Section";
+import Flower from "./models/Flower";
 
 const About = () => {
+  const [currentAnimation, setCurrentAnimation] = useState("openAnimation"); // Default animation
+
   return (
     <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
       <div className="flex-1 flex flex-col justify-center pt-2 sm:pt-8 lg:pr-4">
@@ -29,20 +31,14 @@ const About = () => {
         </motion.p>
       </div>
 
-      <div className="flex-1 h-[50vh] lg:h-full flex items-center justify-center">
+      <div className="flex-1 h-[20vh] lg:h-full flex items-center justify-center">
         <Canvas
           className="w-full h-full bg-transparent"
-          camera={{ position: [0, 0, 0], near: 0.1, far: 1000 }}
+          camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}
         >
+          <directionalLight intensity={2.5} position={[0, 0, 1]} />
           <Suspense fallback={<Loader />}>
-            <directionalLight position={[1, 1, 1]} intensity={2} />
-            <ambientLight intensity={0.5} />
-            <hemisphereLight
-              skyColor="#b1e1ff"
-              groundColor="#000000"
-              intensity={1}
-            />
-            <Shop />
+            <Flower currentAnimation={currentAnimation} />
           </Suspense>
         </Canvas>
       </div>
