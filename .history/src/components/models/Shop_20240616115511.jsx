@@ -31,7 +31,7 @@ const Shop = ({ ...props }) => {
         setIsShopPosition([0, -6.5, -40]);
       } else {
         setIsShopScale([0.45, 0.6, 0.45]);
-        setIsShopPosition([0, -14.5, -43]);
+        setIsShopPosition([0, -25.5, -43]);
       }
     };
 

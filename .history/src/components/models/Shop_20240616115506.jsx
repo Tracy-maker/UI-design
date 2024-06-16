@@ -30,8 +30,8 @@ const Shop = ({ ...props }) => {
         setIsShopScale([0.3, 0.3, 0.3]);
         setIsShopPosition([0, -6.5, -40]);
       } else {
-        setIsShopScale([0.45, 0.6, 0.45]);
-        setIsShopPosition([0, -14.5, -43]);
+        setIsShopScale([0.45, 0.6, 0.2]);
+        setIsShopPosition([0, -25.5, -43]);
       }
     };
 

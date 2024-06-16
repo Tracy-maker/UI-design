@@ -24,14 +24,14 @@ const Shop = ({ ...props }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsShopScale([0.7, 0.8, 0.6]);
+        setIsShopScale([0.6, 0.8, 0.6]);
         setIsShopPosition([0, -20.5, -55]);
       } else if (window.innerWidth < 1024) {
         setIsShopScale([0.3, 0.3, 0.3]);
         setIsShopPosition([0, -6.5, -40]);
       } else {
-        setIsShopScale([0.45, 0.6, 0.45]);
-        setIsShopPosition([0, -14.5, -43]);
+        setIsShopScale([0.5, 0.6, 0.4]);
+        setIsShopPosition([0, -17.5, -43]);
       }
     };
 
@@ -50,11 +50,7 @@ const Shop = ({ ...props }) => {
 
   return (
     <a.group ref={isShopRef} {...props} position={isShopPosition} scale={isShopScale}>
-      <group
-        position={[14.738, 8.824, -14.96]}
-        rotation={[-Math.PI / 2, 0, -1.484]}
-        scale={[1.797, 1.241, 1.153]}
-      >
+  
         <mesh
           geometry={nodes["Object016_Material_#130_0"].geometry}
           material={materials.Material_130}
@@ -75,7 +71,13 @@ const Shop = ({ ...props }) => {
         rotation={[-Math.PI / 2, 0, 0]}
         scale={[1.797, 1.241, 1.153]}
       />
-
+      <mesh
+        geometry={nodes["Plane001_Material_#125_0"].geometry}
+        material={materials.Material_125}
+        position={[-3.444, 2.911, -2.232]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={[0.733, 0.931, 1]}
+      />
       <mesh
         geometry={nodes["Object012_Material_#130_0"].geometry}
         material={materials.Material_130}
