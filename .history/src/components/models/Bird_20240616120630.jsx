@@ -9,7 +9,7 @@ const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const { actions } = useAnimations(animations, birdRef);
   const [mousePosition, setMousePosition] = useState([0, 0, 0]);
-  const [birdScale, setBirdScale] = useState([0.5, 0.5, 0.5]);
+  const [birdScale, setBirdScale] = useState([0.15, 0.15, 0.5]);
 
   useEffect(() => {
     if (actions && Object.keys(actions).length > 0) {

@@ -27,7 +27,7 @@ const Bird = () => {
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setBirdScale([0.2, 0.2, 0.2]);
+        setBirdScale([0.12, 0.2, 0.2]);
       } else {
         setBirdScale([0.4, 0.4, 0.4]);
       }
