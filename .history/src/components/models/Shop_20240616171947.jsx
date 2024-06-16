@@ -16,7 +16,7 @@ import isShopScene from "../../assets/3d/ancient_greek_book_shop.glb";
 const Shop = ({ ...props }) => {
   const isShopRef = useRef();
   const { nodes, materials } = useGLTF(isShopScene);
-  const rotationSpeed = 0.004; 
+  const rotationSpeed = 0.005; 
   const [isShopScale, setIsShopScale] = useState([0.5, 0.5, 0.5]);
   const [isShopPosition, setIsShopPosition] = useState([0, -6.5, -43]);
 
