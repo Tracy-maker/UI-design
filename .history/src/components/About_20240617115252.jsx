@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Loader from "../components/Loader";
 import Section from "./models/Section";
 import Flower from "./models/Flower";
-import Shop from "./models/Shop";
+
 
 const About = () => {
   const [currentAnimation, setCurrentAnimation] = useState("openAnimation"); // Default animation

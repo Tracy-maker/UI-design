@@ -10,15 +10,15 @@ const About = () => {
   const [currentAnimation, setCurrentAnimation] = useState("openAnimation"); // Default animation
 
   return (
-    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
+    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen bg-violet-gradient">
       <motion.div
-        className="flex-1 flex flex-col justify-center pt-2 sm:pt-8 lg:pr-4"
+        className="flex-1 flex flex-col justify-center pt-2 sm:pt-8 lg:pr-4 text-left"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <motion.h1
-          className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-2"
+          className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-2 orange-text-gradient"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
