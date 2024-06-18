@@ -1,0 +1,18 @@
+import React from "react";
+import Section from "./models/Section";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
+
+const Interface = () => {
+  return (
+    <div className="flex flex-col items-center w-screen">
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+    </div>
+  );
+};
+
+export default Interface;
