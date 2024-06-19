@@ -49,6 +49,15 @@ export const skills = [
   },
 ];
 
+import Search from "../../assets/images/Search.png";
+import Thanks from "../../assets/images/Thanks.png";
+import About from "../../assets/images/About.png";
+import Details from "../../assets/images/Details.png";
+import Footer from "../../assets/images/Footer.png";
+import Home from "../../assets/images/Home.png";
+import Login from "../../assets/images/Login.png";
+import Items from "../../assets/images/Items.png";
+
 export const projects = [
   {
     id: 1,

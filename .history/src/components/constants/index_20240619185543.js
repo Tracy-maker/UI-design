@@ -49,6 +49,8 @@ export const skills = [
   },
 ];
 
+
+
 export const projects = [
   {
     id: 1,
