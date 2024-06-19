@@ -11,16 +11,7 @@ import { navLinks } from "./constants";
 const Menu = (props) => {
   const { onSectionChange, menuOpened, setMenuOpened } = props;
   const [musicPlaying, setMusicPlaying] = useState(false);
-  const audioRef = React.useRef(null);
-
-  const toggleMusic = () => {
-    setMusicPlaying(!musicPlaying);
-    if (musicPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-  };
+  const audioRef = React.useRef(null)
 
   return (
     <>
@@ -38,7 +29,7 @@ const Menu = (props) => {
           )}
         </motion.button>
         <motion.button
-          onClick={toggleMusic}
+          onClick={() => setMusicPlaying(!musicPlaying)}
           className="p-3 bg-white w-11 h-11 rounded-full shadow-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -49,10 +40,9 @@ const Menu = (props) => {
             <img src={music} alt="Play music" className="w-full h-full" />
           )}
         </motion.button>
-        <audio ref={audioRef} src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" loop />
       </div>
       <motion.div
-        className={`z-10 fixed top-0 right-0 bottom-0 bg-gray-900 bg-opacity-95 overflow-hidden flex flex-col transform ${
+        className={`z-10 fixed top-0 right-0 bottom-0 bg-gray-500 bg-opacity-95 overflow-hidden flex flex-col transform ${
           menuOpened ? "translate-x-0" : "translate-x-full"
         }`}
         initial={{ x: '100%' }}
