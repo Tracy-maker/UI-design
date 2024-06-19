@@ -5,7 +5,7 @@ const Card = (props) => {
 
   return (
     <div className="rounded-lg overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl">
-      <div className="relative w-full h-72 sm:h-80 md:h-96 lg:h-112 xl:h-122">
+      <div className="relative w-full h-70 sm:h-80 md:h-96 lg:h-112 xl:h-122">
         <div className="w-full h-full overflow-hidden">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>

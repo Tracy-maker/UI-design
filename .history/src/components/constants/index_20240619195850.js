@@ -8,6 +8,7 @@ import Login from "../../assets/images/Login.png";
 import Items from "../../assets/images/Items.png";
 import Cart from "../../assets/images/Cart.png";
 
+
 export const navLinks = [
   {
     id: "about",
