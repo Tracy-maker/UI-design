@@ -28,7 +28,10 @@ const Projects = () => {
   };
 
   return (
-    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
+    <Section
+    
+      className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen"
+    >
       <div className="relative w-full flex flex-col items-center justify-center px-4 sm:px-8">
         <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
           Projects

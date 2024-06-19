@@ -28,11 +28,9 @@ const Projects = () => {
   };
 
   return (
-    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
+    <Section Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen>
       <div className="relative w-full flex flex-col items-center justify-center px-4 sm:px-8">
-        <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
-          Projects
-        </h2>
+        <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">Projects</h2>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto p-2 sm:p-4">
           <div className="relative w-full flex items-center">
