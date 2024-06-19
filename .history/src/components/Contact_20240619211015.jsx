@@ -3,7 +3,7 @@ import Section from "./models/Section";
 
 const Contact = () => {
   return (
-    <Section>
+    <Section className="flex flex-col lg:flex-row items-center justify-center p-6 min-h-screen">
       <div className="flex flex-col items-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8">
           Contact me
