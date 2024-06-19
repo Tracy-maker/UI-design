@@ -11,7 +11,9 @@ const Navbar = ({ onSectionChange }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 bg-primary">
+    <nav
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <div className="text-white text-[38px] sm:text-[32px] font-bold cursor-pointer flex items-center">
           Yi{" "}
@@ -31,6 +33,8 @@ const Navbar = ({ onSectionChange }) => {
             className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle(!toggle)}
           />
+
+        
         </div>
       </div>
     </nav>
