@@ -3,9 +3,9 @@ import Section from "./models/Section";
 
 const Contact = () => {
   return (
-    <Section className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-200">
+    <Section>
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-purple-600 mb-8">
           Contact me
         </h2>
         <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg mb-8">

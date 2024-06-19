@@ -3,9 +3,9 @@ import Section from "./models/Section";
 
 const Contact = () => {
   return (
-    <Section className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-200">
+    <Section>
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-purple-600 mb-8">
           Contact me
         </h2>
         <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg mb-8">
@@ -13,10 +13,8 @@ const Contact = () => {
             Design Summary:
           </h3>
           <p className="text-gray-700">
-            The flower shop mobile app boasts a sleek, easy-to-navigate
-            interface adorned with soft pastel tones and charming flower-themed
-            icons. It provides straightforward navigation, interactive elements
-            that engage users, and a visually pleasing layout.{" "}
+          The flower shop mobile app boasts a sleek, easy-to-navigate interface adorned with soft pastel tones and charming flower-themed icons. It provides straightforward navigation, interactive elements that engage users, and a visually pleasing layout.  The design ensures a seamless user experience across
+            different screen sizes.
           </p>
         </div>
         <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full max-w-lg">

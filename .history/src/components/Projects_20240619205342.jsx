@@ -34,19 +34,19 @@ const Projects = () => {
           Projects
         </h2>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto p-2 sm:p-4 flex items-center">
-          <motion.button
-            onClick={scrollLeft}
-            className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition mr-2 sm:mr-4"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </motion.button>
-          <div className="flex w-full overflow-hidden">
+        <div className="relative z-10 w-full max-w-6xl mx-auto p-2 sm:p-4">
+          <div className="relative w-full flex items-center">
+            <motion.button
+              onClick={scrollLeft}
+              className="absolute left-0 z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </motion.button>
             <div
               ref={scrollContainerRef}
-              className="flex w-full gap-4 sm:gap-8 px-8 overflow-x-scroll scroll-smooth hide-scrollbar"
+              className="flex w-full gap-4 sm:gap-8 px-8 overflow-x-scroll scroll-smooth"
             >
               {projects.map((project) => (
                 <motion.div
@@ -60,15 +60,15 @@ const Projects = () => {
                 </motion.div>
               ))}
             </div>
+            <motion.button
+              onClick={scrollRight}
+              className="absolute right-0 z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </motion.button>
           </div>
-          <motion.button
-            onClick={scrollRight}
-            className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition ml-2 sm:ml-4"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FontAwesomeIcon icon={faArrowRight} />
-          </motion.button>
         </div>
       </div>
     </Section>
