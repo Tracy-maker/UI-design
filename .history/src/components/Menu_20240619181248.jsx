@@ -41,7 +41,7 @@ const Menu = (props) => {
         </motion.button>
       </div>
       <motion.div
-        className={`z-10 fixed top-0 right-0 bottom-0 bg-gray-500 bg-opacity-95 overflow-hidden flex flex-col transform ${
+        className={`z-10 fixed top-0 right-0 bottom-0 bg-gray-400 bg-opacity-95 overflow-hidden flex flex-col transform ${
           menuOpened ? "translate-x-0" : "translate-x-full"
         }`}
         initial={{ x: '100%' }}

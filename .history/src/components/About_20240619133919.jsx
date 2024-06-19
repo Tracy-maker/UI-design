@@ -10,7 +10,10 @@ const About = () => {
   const [currentAnimation, setCurrentAnimation] = useState("openAnimation"); // Default animation
 
   return (
-    <Section className="flex flex-col lg:flex-row items-center justify-center p-4 min-h-screen">
+    <Section
+      
+     
+    >
       <motion.div
         className="flex-1 flex flex-col justify-center pt-2 sm:pt-8 lg:pr-4"
         initial={{ opacity: 0, x: -100 }}
