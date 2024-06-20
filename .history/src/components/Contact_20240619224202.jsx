@@ -3,12 +3,24 @@ import Section from "./models/Section";
 
 const Contact = () => {
   return (
-    <Section>
+    <Section className="flex items-center justify-center min-h-screen p-4 bg-gray-100">
       <div className="flex flex-col items-center w-full max-w-5xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-12">
           Contact me
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-between w-full space-y-8 lg:space-y-0 lg:space-x-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2">
+            <h3 className="text-xl lg:text-2xl font-bold text-purple-900 mb-4">
+              Design Summary
+            </h3>
+            <p className="text-gray-700 lg:text-lg leading-relaxed">
+              The flower shop mobile app boasts a sleek, easy-to-navigate
+              interface adorned with soft pastel tones and charming
+              flower-themed icons. It provides straightforward navigation,
+              interactive elements that engage users, and a visually pleasing
+              layout.
+            </p>
+          </div>
           <div className="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2">
             <form>
               <label
