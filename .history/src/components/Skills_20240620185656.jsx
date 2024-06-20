@@ -18,7 +18,7 @@ const pastelColors = [
 
 const Skills = () => {
   return (
-    <Section>
+    <Section >
       <div className="flex-1 h-[50vh] lg:h-full flex items-center justify-center">
         <Canvas
           className="w-full h-full bg-transparent"
