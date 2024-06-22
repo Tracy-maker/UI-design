@@ -38,18 +38,18 @@ const Skills = () => {
 
       <div className="flex-1 flex flex-col justify-center pt-2 sm:pt-4 md:pt-8 lg:pr-4">
         <motion.h2
-          className="font-black text-white text-[14px] sm:text-[18px] md:text-[24px] lg:text-[32px] xl:text-[40px] leading-tight mt-2"
+          className="font-black text-white text-[16px] sm:text-[20px] md:text-[24px] lg:text-[30px] xl:text-[35px] leading-tight mt-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Skills
         </motion.h2>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {skills.map((skillCategory, categoryIndex) => (
             <div key={categoryIndex} className="mb-4 bg-gray-800 p-2 rounded-lg shadow-md">
               <motion.h3
-                className="font-bold text-xs sm:text-sm md:text-md lg:text-lg text-white mb-1"
+                className="font-bold text-xs sm:text-sm text-white mb-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
@@ -69,7 +69,7 @@ const Skills = () => {
                   }}
                 >
                   <motion.h4
-                    className="text-xs sm:text-sm md:text-md lg:text-lg font-bold text-white"
+                    className="text-xs sm:text-sm lg:text-md font-bold text-white"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: itemIndex * 0.2 }}

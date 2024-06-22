@@ -29,30 +29,24 @@ export const navLinks = [
 
 export const skills = [
   {
-    category: "Visual Design",
-    items: [
-      "Color Theory",
-      "Typography",
-      "Icon Design",
-      "Layout Design",
-      "Visual Hierarchy",
-    ],
+    title: "Visual Design",
+    level: "Color Theory",
   },
   {
-    category: "User Experience (UX)",
-    items: [
-      "User Research",
-      "Information Architecture",
-      "Interaction Design",
-      "Usability Testing",
-    ],
+    title: "Figma Proficiency",
+    level: 70,
   },
   {
-    category: "Prototyping",
-    items: [
-      "Wireframing",
-      "High-Fidelity Prototyping",
-    ],
+    title: "Design Systems and Style Guides",
+    level: 65,
+  },
+  {
+    title: "Visual Design Skills",
+    level: 85,
+  },
+  {
+    title: "Interactive Design",
+    level: 60,
   },
 ];
 

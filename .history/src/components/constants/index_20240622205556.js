@@ -28,32 +28,9 @@ export const navLinks = [
 ];
 
 export const skills = [
-  {
-    category: "Visual Design",
-    items: [
-      "Color Theory",
-      "Typography",
-      "Icon Design",
-      "Layout Design",
-      "Visual Hierarchy",
-    ],
-  },
-  {
-    category: "User Experience (UX)",
-    items: [
-      "User Research",
-      "Information Architecture",
-      "Interaction Design",
-      "Usability Testing",
-    ],
-  },
-  {
-    category: "Prototyping",
-    items: [
-      "Wireframing",
-      "High-Fidelity Prototyping",
-    ],
-  },
+  { category: "Visual Design", items: ["Color Theory", "Typography", "Icon Design", "Layout Design", "Visual Hierarchy"] },
+  { category: "User Experience (UX)", items: ["User Research", "Information Architecture", "Interaction Design", "Usability Testing"] },
+  { category: "Prototyping", items: ["Wireframing", "High-Fidelity Prototyping", "Tool Proficiency (Sketch, Figma, Adobe XD)"] }
 ];
 
 export const projects = [

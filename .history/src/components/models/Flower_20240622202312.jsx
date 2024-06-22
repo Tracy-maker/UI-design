@@ -31,7 +31,7 @@ const Flower = ({ currentAnimation, ...props }) => {
       dispose={null}
       position={[0, 0, 0]}
       rotation={[0, 5, 0]}
-      scale={[0.006, 0.005, 0.007]}
+      scale={[0.008, 0.008, 0.008]}
     >
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={1}>

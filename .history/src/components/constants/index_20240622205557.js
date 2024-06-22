@@ -52,6 +52,7 @@ export const skills = [
     items: [
       "Wireframing",
       "High-Fidelity Prototyping",
+      "Tool Proficiency (Sketch, Figma, Adobe XD)",
     ],
   },
 ];
