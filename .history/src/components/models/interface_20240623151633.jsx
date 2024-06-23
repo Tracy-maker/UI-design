@@ -9,7 +9,7 @@ const Interface = ({ setSection }) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <About setSection={setSection} />
-      <Challenge />
+      <Challenge/>
       <Skills />
       <Projects />
       <Contact />
