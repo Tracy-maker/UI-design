@@ -37,7 +37,7 @@ const Projects = () => {
         <div className="relative z-10 w-full max-w-6xl mx-auto p-1 sm:p-2 flex items-center">
           <motion.button
             onClick={scrollLeft}
-            className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition mr-1 sm:mr-2"
+            className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition mr-2 sm:mr-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
