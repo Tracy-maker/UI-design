@@ -34,7 +34,7 @@ const Projects = () => {
           Projects
         </h2>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto p-2 sm:p-4 flex items-center">
+        <div className="relative z-10 w-full max-w-6xl mx-auto p-4 sm:p-4 flex items-center">
           <motion.button
             onClick={scrollLeft}
             className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition mr-2 sm:mr-4"

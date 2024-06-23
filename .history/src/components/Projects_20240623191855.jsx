@@ -30,7 +30,7 @@ const Projects = () => {
   return (
     <Section>
       <div className="relative w-full flex flex-col items-center justify-center px-4 sm:px-8">
-        <h2 className="text-3xl sm:text-5xl font-bold mb-20 text-center">
+        <h2 className="text-3xl sm:text-5xl font-bold mb-10  text-center">
           Projects
         </h2>
 
