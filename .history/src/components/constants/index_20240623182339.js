@@ -27,6 +27,8 @@ export const navLinks = [
   },
 ];
 
+
+
 export const projects = [
   {
     id: 1,

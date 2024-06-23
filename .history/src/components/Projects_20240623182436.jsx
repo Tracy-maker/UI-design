@@ -5,6 +5,7 @@ import Card from "./models/Card";
 import { projects } from "./constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { projects } from "./constants";
 
 const Projects = () => {
   const scrollContainerRef = useRef(null);
@@ -28,7 +29,7 @@ const Projects = () => {
   };
 
   return (
-    <Section>
+    <Section >
       <div className="relative w-full flex flex-col items-center justify-center px-4 sm:px-8">
         <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
           Projects

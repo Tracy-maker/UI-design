@@ -9,13 +9,13 @@ const Skills = () => {
   return (
     <Section className="bg-gray-900 p-8 rounded-lg shadow-lg">
       <div className="flex flex-col lg:flex-row items-center justify-between">
-        <div className="w-full lg:w-3/5 flex items-center justify-center mb-8 lg:mb-0">
+        <div className="w-full lg:w-1/2 flex items-center justify-center mb-8 lg:mb-0">
           <Canvas
             className="w-full h-[50vh] lg:h-full bg-transparent"
             camera={{ position: [0, 0, 0], near: 0.1, far: 1000 }}
           >
             <Suspense fallback={<Loader />}>
-              <directionalLight position={[1, 1, 1]} intensity={4} />
+              <directionalLight position={[1, 1, 1]} intensity={2} />
               <ambientLight intensity={0.5} />
               <hemisphereLight
                 skyColor="#b1e1ff"
@@ -27,7 +27,15 @@ const Skills = () => {
           </Canvas>
         </div>
 
-        <div className="w-full lg:w-2/5 text-white lg:pl-12">
+        <div className="w-full lg:w-1/2 text-white lg:pl-12">
+          <motion.h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Skills
+          </motion.h2>
           <motion.p
             className="text-lg md:text-xl lg:text-2xl leading-relaxed"
             initial={{ opacity: 0 }}
