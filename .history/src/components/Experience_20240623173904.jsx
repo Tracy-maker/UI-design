@@ -30,7 +30,7 @@ const Experience = () => {
             </p>
           </motion.div>
           <motion.div
-            className="w-full md:w-1/2 flex justify-center mt-6 md:mb-0"
+            className="w-full md:w-1/2 flex justify-center mt-6 mb-4 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}

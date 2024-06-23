@@ -14,7 +14,7 @@ const Content = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <img src={Details} alt="Details" className="w-2/5 md:w-2/4" />
+            <img src={Details} alt="Details" className="w-2/5 md:w-2/4 mt-4" />
           </motion.div>
           <motion.div
             className="w-full md:w-3/4 text-left md:pl-8"
@@ -22,7 +22,7 @@ const Content = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-purple-500 mb-4 mt-6">
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-purple-500 mb-4">
               Challenge 3: Content Layout
             </h2>
             <p className="text-base sm:text-lg text-white text-justify">
