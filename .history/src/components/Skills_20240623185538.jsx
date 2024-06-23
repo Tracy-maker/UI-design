@@ -22,7 +22,7 @@ const Skills = () => {
                 groundColor="#000000"
                 intensity={1}
               />
-              <Shop /> 
+              <Shop scale={[2, 2, 2]} /> {/* Increased model scale */}
             </Suspense>
           </Canvas>
         </div>

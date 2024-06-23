@@ -7,7 +7,7 @@ import Section from "./models/Section";
 
 const Skills = () => {
   return (
-    <Section>
+    <Section className="bg-gray-900 p-8 rounded-lg shadow-lg">
       <div className="flex flex-col lg:flex-row items-center justify-between">
         <div className="w-full lg:w-3/5 flex items-center justify-center mb-8 lg:mb-0">
           <Canvas
@@ -22,13 +22,20 @@ const Skills = () => {
                 groundColor="#000000"
                 intensity={1}
               />
-              <Shop /> 
+              <Shop scale={[2, 2, 2]} /> {/* Increased model scale */}
             </Suspense>
           </Canvas>
         </div>
 
         <div className="w-full lg:w-2/5 text-white lg:pl-12">
-
+          <motion.h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Skills
+          </motion.h2>
           <motion.p
             className="text-lg md:text-xl lg:text-2xl leading-relaxed"
             initial={{ opacity: 0 }}
