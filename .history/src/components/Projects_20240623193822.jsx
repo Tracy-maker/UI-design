@@ -29,12 +29,12 @@ const Projects = () => {
 
   return (
     <Section>
-      <div className="relative w-full flex flex-col items-center justify-center px-1 sm:px-2">
+      <div className="relative w-full flex flex-col items-center justify-center px-4 sm:px-8">
         <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-center">
           Projects
         </h2>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto p-1 sm:p-2 flex items-center">
+        <div className="relative z-10 w-full max-w-6xl mx-auto p-1 sm:p-2 flex items-center">
           <motion.button
             onClick={scrollLeft}
             className="z-20 p-2 sm:p-3 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-300 transition mr-1 sm:mr-2"
@@ -46,7 +46,7 @@ const Projects = () => {
           <div className="flex w-full overflow-hidden">
             <div
               ref={scrollContainerRef}
-              className="flex w-full gap-4 sm:gap-8 px-2 overflow-x-scroll scroll-smooth hide-scrollbar"
+              className="flex w-full gap-1 sm:gap-8 px-2 overflow-x-scroll scroll-smooth hide-scrollbar"
             >
               {projects.map((project) => (
                 <motion.div
