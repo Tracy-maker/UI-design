@@ -31,7 +31,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          I am a Web Developer & UI designer, and <br className="sm:block hidden" />
+          I am a Web Developer&UI designer, and <br className="sm:block hidden" />
           this is my portfolio <br className="sm:block hidden" />
           for the flower shop mobile app.
         </motion.p>
