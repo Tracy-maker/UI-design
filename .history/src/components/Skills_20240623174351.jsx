@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Shop from "./models/Shop";
 import Loader from "../components/Loader";
 import Section from "./models/Section";
+import { skills } from "./constants";
+
+
 
 const Skills = () => {
   return (
@@ -36,11 +39,40 @@ const Skills = () => {
           Skills
         </motion.h2>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          With a keen eye for detail and a love for aesthetics, I strive to
-          deliver designs that not only look great but also provide an intuitive
-          and enjoyable user experience. My goal is to help businesses enhance
-          their digital presence and connect with their customers through
-          engaging and effective UI design.
+          {skills.map((skillCategory, categoryIndex) => (
+            <div key={categoryIndex} className="mb-4 bg-gray-800 p-2 rounded-lg shadow-md">
+              <motion.h3
+                className="font-bold text-xs sm:text-sm md:text-md lg:text-lg text-white mb-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
+              >
+                {skillCategory.category}
+              </motion.h3>
+              {skillCategory.items.map((item, itemIndex) => (
+                <motion.div
+                  className="mt-1"
+                  key={itemIndex}
+                  initial={{ opacity: 0, scale: 0.7, rotate: -15 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: itemIndex * 0.2,
+                    ease: "easeOut",
+                  }}
+                >
+                  <motion.h4
+                    className="text-xs sm:text-sm md:text-md lg:text-lg font-bold text-white"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: itemIndex * 0.2 }}
+                  >
+                    {item}
+                  </motion.h4>
+                </motion.div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </Section>

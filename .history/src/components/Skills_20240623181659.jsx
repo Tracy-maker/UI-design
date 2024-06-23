@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Shop from "./models/Shop";
 import Loader from "../components/Loader";
 import Section from "./models/Section";
+import { skills } from "./constants";
 
 const Skills = () => {
   return (
@@ -36,11 +37,7 @@ const Skills = () => {
           Skills
         </motion.h2>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          With a keen eye for detail and a love for aesthetics, I strive to
-          deliver designs that not only look great but also provide an intuitive
-          and enjoyable user experience. My goal is to help businesses enhance
-          their digital presence and connect with their customers through
-          engaging and effective UI design.
+        With a keen eye for detail and a love for aesthetics, I strive to deliver designs that not only look great but also provide an intuitive and enjoyable user experience. My goal is to help businesses enhance their digital presence and connect with their customers through engaging and effective UI design.
         </div>
       </div>
     </Section>
