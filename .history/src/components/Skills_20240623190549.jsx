@@ -14,14 +14,7 @@ const Skills = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <motion.h1
-          className="font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[98px] mt-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          My Goal
-        </motion.h1>
+      
         <motion.p
           className="text-white font-medium lg:text-[30px] sm:text-[24px] xs:text-[20px] text-[16px] lg:leading-[44px] mt-2"
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +39,7 @@ const Skills = () => {
           className="w-full h-full bg-transparent"
           camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}
         >
-          <directionalLight intensity={4} position={[0, 0, 1]} />
+          <directionalLight intensity={5} position={[0, 0, 1]} />
           <Suspense fallback={<Loader />}>
             <Shop />
           </Suspense>

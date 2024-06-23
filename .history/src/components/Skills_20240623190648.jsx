@@ -46,7 +46,7 @@ const Skills = () => {
           className="w-full h-full bg-transparent"
           camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}
         >
-          <directionalLight intensity={4} position={[0, 0, 1]} />
+          <directionalLight intensity={5} position={[0, 0, 1]} />
           <Suspense fallback={<Loader />}>
             <Shop />
           </Suspense>
