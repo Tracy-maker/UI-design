@@ -39,7 +39,7 @@ const Challenge = () => {
               attention. The choice of colors, images, and typography must work
               perfectly together.
             </p>
-            <p className="text-base sm:text-lg text-white text-justify">
+            <p className="text-base sm:text-lg text-white">
               <strong className="font-semibold">Solution:</strong> Use soft
               colors like pink, light blue, and white to convey a warm and
               romantic feeling. High-quality images of flowers can enhance
