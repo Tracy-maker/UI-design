@@ -1,14 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Section from "./models/Section";
-import About from "../assets/images/About.png"; // Make sure the path is correct
 
-const Challenge = () => {
+const Experience = () => {
   return (
     <Section>
       <div>
         <motion.h1
-          className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4"
+          className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-6"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -17,7 +14,7 @@ const Challenge = () => {
         </motion.h1>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <motion.div
-            className="w-full md:w-1/2 flex justify-center mb-2 md:mb-0"
+            className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -30,10 +27,10 @@ const Challenge = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-purple-500 mb-4">
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-4">
               Challenge 1: Interface Design
             </h2>
-            <p className="text-base sm:text-lg text-white text-justify">
+            <p className="text-base sm:text-lg text-white mb-2 text-justify">
               <strong className="font-semibold">Visual Appeal:</strong> The
               flower shop app needs to be visually appealing to attract users'
               attention. The choice of colors, images, and typography must work
@@ -51,5 +48,4 @@ const Challenge = () => {
     </Section>
   );
 };
-
-export default Challenge;
+export default Experience;

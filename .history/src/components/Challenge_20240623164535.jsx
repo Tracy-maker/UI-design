@@ -30,7 +30,7 @@ const Challenge = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-purple-500 mb-4">
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-pink-200 mb-4">
               Challenge 1: Interface Design
             </h2>
             <p className="text-base sm:text-lg text-white text-justify">
