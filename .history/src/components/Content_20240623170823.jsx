@@ -1,9 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Section from "./models/Section";
-import About from "../assets/images/About.png"; 
 
-const Challenge = () => {
+const Content = () => {
   return (
     <Section>
       <div>
@@ -52,4 +49,4 @@ const Challenge = () => {
   );
 };
 
-export default Challenge;
+export default Content;

@@ -12,7 +12,7 @@ const Interface = ({ setSection }) => {
       <About setSection={setSection} />
       <Challenge />
       <Experience />
-      <Content />
+      <Content
       <Projects />
       <Skills />
     </div>

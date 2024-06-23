@@ -4,7 +4,6 @@ import Skills from "../Skills";
 import Projects from "../Projects";
 import Challenge from "../Challenge";
 import Experience from "../Experience";
-import Content from "../Content";
 
 const Interface = ({ setSection }) => {
   return (
@@ -12,7 +11,6 @@ const Interface = ({ setSection }) => {
       <About setSection={setSection} />
       <Challenge />
       <Experience />
-      <Content />
       <Projects />
       <Skills />
     </div>
