@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import Menu from "./components/Menu";
-import LoadingPage from "./components/models/LoadingPage";
+import LoadingPage from "./components/LoadingPage";
 
 const Bird = lazy(() => import("./components/models/Bird"));
 const ScrollManager = lazy(() => import("./components/models/ScrollManager"));

@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import Menu from "./components/Menu";
-import LoadingPage from "./components/models/LoadingPage";
+import LoadingPage from "../components/LoadingPage";
 
 const Bird = lazy(() => import("./components/models/Bird"));
 const ScrollManager = lazy(() => import("./components/models/ScrollManager"));
@@ -23,8 +23,8 @@ const App = () => {
         menuOpened={menuOpened}
         setMenuOpened={setMenuOpened}
       />
-      <Suspense fallback={<LoadingPage />}>
-        <Canvas shadows camera={{ position: [0, 0, 15], fov: 30 }}>
+      <Canvas shadows camera={{ position: [0, 0, 15], fov: 30 }}>
+        <Suspense fallback={<LoadingPage />}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 10]} intensity={1} />
           <Bird />
@@ -34,8 +34,8 @@ const App = () => {
               <Interface setSection={setSection} />
             </Scroll>
           </ScrollControls>
-        </Canvas>
-      </Suspense>
+        </Suspense>
+      </Canvas>
     </div>
   );
 };
