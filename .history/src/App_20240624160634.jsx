@@ -23,7 +23,7 @@ const App = () => {
         setMenuOpened={setMenuOpened}
       />
       <Canvas shadows camera={{ position: [0, 0, 15], fov: 30 }}>
-        <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 10]} intensity={1} />
           <Bird />
